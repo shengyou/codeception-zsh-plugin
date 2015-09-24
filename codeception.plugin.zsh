@@ -2,7 +2,7 @@
 
 # Functions
 _codeception_get_command_list () {
-    vendor/bin/codecept \
+    vendor/bin/codecept --no-ansi \
     	| sed "1,/Available commands/d" \
     	| awk '/^  [a-z]+/ { print $1 }'
 }
